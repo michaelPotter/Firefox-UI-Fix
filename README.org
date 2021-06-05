@@ -1,3 +1,12 @@
+Installation:
+1. find your profile folder (probably ~/.mozilla/firefox/abcdefgh.default-release/)
+1. copy `user.js` into there
+1. create a dir `chrome` in there
+1. copy everything else into `chrome`
+1. goto about:support
+1. click "clear startup cache..." to restart
+
+
 * Lepton (old name: Proton Fix)
   :PROPERTIES:
   :TOC:      :include all
