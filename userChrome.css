@@ -1,15 +1,5 @@
 @media (-moz-proton) {
 
-  /*/*= Bookmark Menu - Reduce Padding =========================================*/*/
-  /*:root {*/
-  /*  --bookmark-menu-padding: 3px;*/
-  /*}*/
-  /*:root[uidensity="compact"] {*/
-  /*  --bookmark-menu-padding: 1.5px;*/
-  /*}*/
-
-
-
   /* Pinned Tab - Titlechanged Indicator position fix */
   :root:not([uidensity=touch]) .tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
   :root:not([uidensity=touch]) .tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]) {
@@ -42,6 +32,24 @@
     /* Original: linear-gradient(var(--lwt-selected-tab-background-color, transparent), var(--lwt-selected-tab-background-color, transparent)), linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)), var(--lwt-header-image, none)
  */
     background-image: linear-gradient(var(--toolbar-bgcolor, transparent), var(--toolbar-bgcolor, transparent)), linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)), var(--lwt-header-image, none) !important;
+  }
+
+
+  /*
+   * = Bookmark Menu - Reduce Padding =========================================
+   */
+  :root {
+    --bookmark-menu-padding: 3px;
+  }
+  :root[uidensity="compact"] {
+    --bookmark-menu-padding: 1.5px;
+  }
+
+  :root:not([uidensity="touch"]) #BMB_bookmarksPopup .subviewbutton,
+  :root:not([uidensity="touch"]) #BMB_bookmarksPopup .subviewbutton,
+  :root:not([uidensity="touch"]) #PlacesToolbar menupopup[placespopup] .bookmark-item,
+  :root:not([uidensity="touch"]) #PlacesToolbar menupopup[placespopup] .openintabs-menuitem {
+    padding-block: var(--bookmark-menu-padding) !important;
   }
 
 
